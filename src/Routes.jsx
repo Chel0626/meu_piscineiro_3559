@@ -9,6 +9,7 @@ import ServiceVisitWorkflow from './pages/service-visit-workflow';
 import ProductInventory from './pages/product-inventory';
 import ClientManagement from './pages/client-management';
 import ClientServiceHistory from './pages/client-service-history';
+import AIAssistant from './pages/ai-assistant';
 
 const Routes = () => {
   return (
@@ -24,6 +25,7 @@ const Routes = () => {
         <Route path="/product-inventory" element={<ProductInventory />} />
         <Route path="/client-management" element={<ClientManagement />} />
         <Route path="/client-service-history" element={<ClientServiceHistory />} />
+        <Route path="/ai-assistant" element={<AIAssistant />} />
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
       </ErrorBoundary>

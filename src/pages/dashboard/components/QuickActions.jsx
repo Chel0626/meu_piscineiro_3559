@@ -5,36 +5,39 @@ import Icon from '../../../components/AppIcon';
 const QuickActions = ({ onNavigate }) => {
   const quickActions = [
     {
+      title: 'Nova Visita',
+      description: 'Iniciar atendimento a cliente',
+      icon: 'UserPlus',
+      color: 'bg-blue-600 hover:bg-blue-700',
+      route: '/service-visit-workflow'
+    },
+    {
       title: 'Gerenciar Clientes',
-      description: 'Adicionar, editar ou remover clientes',
+      description: 'Ver todos os clientes',
       icon: 'Users',
-      color: 'bg-blue-50 border-blue-200 hover:bg-blue-100',
-      iconColor: 'text-blue-600',
+      color: 'bg-green-600 hover:bg-green-700',
       route: '/client-management'
     },
     {
-      title: 'Inventário de Produtos',
-      description: 'Controlar estoque de produtos químicos',
+      title: 'Estoque',
+      description: 'Controlar produtos',
       icon: 'Package',
-      color: 'bg-green-50 border-green-200 hover:bg-green-100',
-      iconColor: 'text-green-600',
+      color: 'bg-purple-600 hover:bg-purple-700',
       route: '/product-inventory'
     },
     {
-      title: 'Histórico de Serviços',
-      description: 'Visualizar histórico completo de visitas',
-      icon: 'History',
-      color: 'bg-purple-50 border-purple-200 hover:bg-purple-100',
-      iconColor: 'text-purple-600',
+      title: 'Histórico',
+      description: 'Relatórios de serviços',
+      icon: 'FileText',
+      color: 'bg-orange-600 hover:bg-orange-700',
       route: '/client-service-history'
     },
     {
-      title: 'Nova Visita',
-      description: 'Iniciar uma visita de serviço',
-      icon: 'Plus',
-      color: 'bg-orange-50 border-orange-200 hover:bg-orange-100',
-      iconColor: 'text-orange-600',
-      route: '/service-visit-workflow'
+      title: 'Assistente IA',
+      description: 'Ajuda com IA Gemini',
+      icon: 'Brain',
+      color: 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700',
+      route: '/ai-assistant'
     }
   ];
 
