@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Icon from '../../components/AppIcon';
 import Button from '../../components/ui/Button';
+import AppHeader from '../../components/AppHeader';
 import WeeklyCalendar from './components/WeeklyCalendar';
-
 import DashboardMetrics from './components/DashboardMetrics';
 import FilterToolbar from './components/FilterToolbar';
 import QuickActions from './components/QuickActions';
@@ -179,47 +179,20 @@ const Dashboard = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
-                <Icon name="Waves" size={20} color="white" />
-              </div>
-              <div>
-                <h1 className="text-xl font-semibold text-gray-900">
-                  Meu Piscineiro
-                </h1>
-                <p className="text-sm text-gray-500 hidden sm:block">
-                  Dashboard de Controle
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-4">
-              <div className="hidden md:block text-right">
-                <p className="text-sm font-medium text-gray-900">
-                  {formatCurrentTime()?.split(',')?.[0]}
-                </p>
-                <p className="text-xs text-gray-500">
-                  {formatCurrentTime()?.split(',')?.slice(1)?.join(',')?.trim()}
-                </p>
-              </div>
-              
-              <Button
-                variant="outline"
-                size="sm"
-                iconName="Settings"
-                iconPosition="left"
-                iconSize={16}
-                onClick={() => navigate('/settings')}
-              >
-                <span className="hidden sm:inline">Configurações</span>
-              </Button>
-            </div>
-          </div>
+      <AppHeader 
+        title="Dashboard" 
+        subtitle="Controle de Visitas e Manutenções"
+      >
+        <div className="hidden md:block text-right">
+          <p className="text-sm font-medium text-gray-900">
+            {formatCurrentTime()?.split(',')?.[0]}
+          </p>
+          <p className="text-xs text-gray-500">
+            {formatCurrentTime()?.split(',')?.slice(1)?.join(',')?.trim()}
+          </p>
         </div>
-      </div>
+      </AppHeader>
+
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {/* Welcome Section */}
